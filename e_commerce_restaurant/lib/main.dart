@@ -1,6 +1,8 @@
+import 'package:e_commerce_restaurant/services/firebase_services.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+main() async {
+  await initServices();
   runApp(const MyApp());
 }
 

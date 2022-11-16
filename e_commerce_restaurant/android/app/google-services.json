@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "775064403457",
+    "project_id": "e-commerce-restaurant-app",
+    "storage_bucket": "e-commerce-restaurant-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775064403457:android:5ec193bce3fb9ec1488a00",
+        "android_client_info": {
+          "package_name": "com.example.e_commerce_restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775064403457-9dvaod3pjsg6r7945mve3f90o9nrp4ra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJoCREqHpdUqfEuFYdRaCSdfbuMW2TpkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775064403457-9dvaod3pjsg6r7945mve3f90o9nrp4ra.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

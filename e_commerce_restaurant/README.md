@@ -1,16 +1,28 @@
 # e_commerce_restaurant
 
-A new Flutter project for E-Commerce Restaurant App.
+A new Flutter project for E-Commerce Restaurant App where the user can discover new food-boxes and add it to cart then submit it to order
+
+## Screenshots
+
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
 This project use Flutter 3.3.8 on stable channel
 
-A few resources to get you started if this is your first Flutter project:
+In this project i have used:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- firebase as a Backend to fetch the date and also to save it
+- Riverpod as state managemt solution
+- get_it for the dependency injection
+- auto_route for managing the routing in the App and web
+- json_serializable to help converting from json to Dart models
+- google_fonts for better fonts
+- lottie for animated loading state
+- logger to log the errors
+
+This project work on Android, ios, macOs and Web
+
+
 
 

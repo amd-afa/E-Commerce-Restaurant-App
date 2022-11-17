@@ -151,7 +151,7 @@ class _OrdersBodyState extends ConsumerState<OrdersBody> {
                   });
                 }
                 await Future.delayed(const Duration(seconds: 3));
-                AutoRouter.of(context).popAndPush(const HomeRoute());
+                AutoRouter.of(context).popUntilRoot();
               } else {
                 Flushbar(
                   margin: const EdgeInsets.all(16),

@@ -2,23 +2,24 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'product_data.g.dart';
 
-@JsonSerializable()
-class Data {
+@JsonSerializable(explicitToJson: true)
+class ProductData {
+  late double? price;
+  late String? imageUrl;
   late String? description;
   late String? id;
-  late String? imageUrl;
-  late double? price;
   late String? title;
 
-  Data({
+  ProductData({
+    this.price,
+    this.imageUrl,
     this.description,
     this.id,
-    this.imageUrl,
-    this.price,
     this.title,
   });
 
-  factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+  factory ProductData.fromJson(Map<String, dynamic> json) =>
+      _$ProductDataFromJson(json);
 
-  Map<String, dynamic> toJson() => _$DataToJson(this);
+  Map<String, dynamic> toJson() => _$ProductDataToJson(this);
 }

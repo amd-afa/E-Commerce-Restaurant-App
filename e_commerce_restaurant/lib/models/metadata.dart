@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'metadata.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class Metadata {
   late String? createdTime;
 

@@ -22,7 +22,23 @@ class _$AppRouter extends RootStackRouter {
         routeData: routeData,
         child: const HomeScreen(),
       );
-    }
+    },
+    ProductDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<ProductDetailsRouteArgs>();
+      return MaterialPageX<Type>(
+        routeData: routeData,
+        child: ProductDetailsScreen(
+          product: args.product,
+          key: args.key,
+        ),
+      );
+    },
+    CartRoute.name: (routeData) {
+      return MaterialPageX<Type>(
+        routeData: routeData,
+        child: const CartScreen(),
+      );
+    },
   };
 
   @override
@@ -30,7 +46,15 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           HomeRoute.name,
           path: '/',
-        )
+        ),
+        RouteConfig(
+          ProductDetailsRoute.name,
+          path: '/productDetails',
+        ),
+        RouteConfig(
+          CartRoute.name,
+          path: '/cart',
+        ),
       ];
 }
 
@@ -44,4 +68,50 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+}
+
+/// generated route for
+/// [ProductDetailsScreen]
+class ProductDetailsRoute extends PageRouteInfo<ProductDetailsRouteArgs> {
+  ProductDetailsRoute({
+    required ProductData product,
+    Key? key,
+  }) : super(
+          ProductDetailsRoute.name,
+          path: '/productDetails',
+          args: ProductDetailsRouteArgs(
+            product: product,
+            key: key,
+          ),
+        );
+
+  static const String name = 'ProductDetailsRoute';
+}
+
+class ProductDetailsRouteArgs {
+  const ProductDetailsRouteArgs({
+    required this.product,
+    this.key,
+  });
+
+  final ProductData product;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'ProductDetailsRouteArgs{product: $product, key: $key}';
+  }
+}
+
+/// generated route for
+/// [CartScreen]
+class CartRoute extends PageRouteInfo<void> {
+  const CartRoute()
+      : super(
+          CartRoute.name,
+          path: '/cart',
+        );
+
+  static const String name = 'CartRoute';
 }

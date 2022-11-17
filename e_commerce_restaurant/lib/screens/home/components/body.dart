@@ -1,5 +1,11 @@
-import 'package:e_commerce_restaurant/utilities/text_style.dart';
+import 'package:e_commerce_restaurant/providers/products_provider.dart';
+import 'package:e_commerce_restaurant/screens/home/components/products_list.dart';
+import 'package:e_commerce_restaurant/utilities/logger.dart';
+import 'package:e_commerce_restaurant/utilities/style/text_style.dart';
+import 'package:e_commerce_restaurant/widgets/loading_widget.dart';
+import 'package:e_commerce_restaurant/widgets/lottie_error_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomeBody extends StatefulWidget {
   const HomeBody({Key? key}) : super(key: key);
@@ -16,7 +22,7 @@ class _HomeBodyState extends State<HomeBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          const SizedBox(height: 16),
+          const SizedBox(height: 23),
           Row(
             children: <Widget>[
               Expanded(
@@ -71,6 +77,20 @@ class _HomeBodyState extends State<HomeBody> {
           Text(
             'Aktuell Kochboxen',
             style: headLine2(),
+          ),
+          const SizedBox(height: 12),
+          Consumer(
+            builder: (context, ref, child) {
+              final productsListResutl = ref.watch(productsListFutureProvider);
+              return productsListResutl.map(data: (data) {
+                return ProductsList(productsList: data.value);
+              }, error: (error) {
+                logger.e(error);
+                return const LottieErrorWidget();
+              }, loading: (loading) {
+                return const LottieLoadingWidget();
+              });
+            },
           ),
         ],
       ),

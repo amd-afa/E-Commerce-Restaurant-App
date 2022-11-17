@@ -1,4 +1,4 @@
-import 'package:e_commerce_restaurant/utilities/text_style.dart';
+import 'package:e_commerce_restaurant/utilities/style/text_style.dart';
 import 'package:flutter/material.dart';
 
 import 'router/app_router.dart';

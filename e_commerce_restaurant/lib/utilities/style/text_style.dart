@@ -23,7 +23,7 @@ TextStyle titleStyle({
     GoogleFonts.oswald(
       letterSpacing: 0,
       fontWeight: FontWeight.w300,
-      fontSize: 24,
+      fontSize: 20,
       color: color ?? Colors.black87,
     );
 

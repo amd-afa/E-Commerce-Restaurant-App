@@ -4,14 +4,15 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'products.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class Products {
-  late Data? date;
   late Metadata? metadata;
 
+  late ProductData? data;
+
   Products({
-    this.date,
     this.metadata,
+    this.data,
   });
 
   factory Products.fromJson(Map<String, dynamic> json) =>

@@ -1,6 +1,6 @@
 # e_commerce_restaurant
 
-A new Flutter project for E-Commerce Restaurant App where the user can discover new food-boxes and add it to cart then submit it to order
+A new Flutter project for E-Commerce Restaurant App called FRESHII where the user can discover new food-boxes and add it to cart then submit it to order
 
 ## Screenshots
 

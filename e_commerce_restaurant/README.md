@@ -21,7 +21,7 @@ This project use Flutter 3.3.8 on stable channel
 In this project i have used:
 
 - firebase as a Backend to fetch the date and also to save it
-- Riverpod as state managemt solution
+- Riverpod as state managemnt solution
 - get_it for the dependency injection
 - auto_route for managing the routing in the App and web
 - json_serializable to help converting from json to Dart models

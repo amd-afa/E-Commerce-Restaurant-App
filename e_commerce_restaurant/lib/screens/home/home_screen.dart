@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce_restaurant/router/app_router.dart';
 import 'package:e_commerce_restaurant/screens/home/components/body.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            AutoRouter.of(context).push(const CartRoute());
+          },
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: const Icon(Icons.shopping_cart_outlined),

@@ -39,6 +39,17 @@ class _$AppRouter extends RootStackRouter {
         child: const CartScreen(),
       );
     },
+    OrdersRoute.name: (routeData) {
+      final args = routeData.argsAs<OrdersRouteArgs>();
+      return MaterialPageX<Type>(
+        routeData: routeData,
+        child: OrdersScreen(
+          productsIdInCart: args.productsIdInCart,
+          totalSummary: args.totalSummary,
+          key: args.key,
+        ),
+      );
+    },
   };
 
   @override
@@ -54,6 +65,10 @@ class _$AppRouter extends RootStackRouter {
         RouteConfig(
           CartRoute.name,
           path: '/cart',
+        ),
+        RouteConfig(
+          OrdersRoute.name,
+          path: '/orders',
         ),
       ];
 }
@@ -114,4 +129,43 @@ class CartRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'CartRoute';
+}
+
+/// generated route for
+/// [OrdersScreen]
+class OrdersRoute extends PageRouteInfo<OrdersRouteArgs> {
+  OrdersRoute({
+    required List<String> productsIdInCart,
+    required double totalSummary,
+    Key? key,
+  }) : super(
+          OrdersRoute.name,
+          path: '/orders',
+          args: OrdersRouteArgs(
+            productsIdInCart: productsIdInCart,
+            totalSummary: totalSummary,
+            key: key,
+          ),
+        );
+
+  static const String name = 'OrdersRoute';
+}
+
+class OrdersRouteArgs {
+  const OrdersRouteArgs({
+    required this.productsIdInCart,
+    required this.totalSummary,
+    this.key,
+  });
+
+  final List<String> productsIdInCart;
+
+  final double totalSummary;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'OrdersRouteArgs{productsIdInCart: $productsIdInCart, totalSummary: $totalSummary, key: $key}';
+  }
 }

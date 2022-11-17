@@ -19,7 +19,7 @@ class CartServices {
 
   Future<void> addProductToCart({required Products product}) async {
     DocumentReference<Object?> docRef =
-        _firestore.collection(CART_COLLECTION).doc();
+        _firestore.collection(CART_COLLECTION).doc(product.data!.id);
     return docRef.set(product.toJson());
   }
 }

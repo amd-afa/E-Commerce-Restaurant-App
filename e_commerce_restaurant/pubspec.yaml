@@ -20,6 +20,7 @@ dependencies:
   auto_route: ^5.0.2
   get_it: ^7.2.0
   flutter_riverpod: ^2.1.1
+  another_flushbar: ^1.12.29
   google_fonts: ^3.0.1
   lottie: ^2.0.0
   logger: ^1.1.0 

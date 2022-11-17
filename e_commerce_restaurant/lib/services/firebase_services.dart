@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_restaurant/services/cart_services.dart';
 import 'package:e_commerce_restaurant/services/firebase_options.dart';
+import 'package:e_commerce_restaurant/services/orders_services.dart';
 import 'package:e_commerce_restaurant/services/product_services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ final GetIt getIt = GetIt.instance;
 registeredServices() {
   getIt.registerSingleton(ProductServices(FirebaseFirestore.instance));
   getIt.registerSingleton(CartServices(FirebaseFirestore.instance));
+  getIt.registerSingleton(OrdersServices(FirebaseFirestore.instance));
 }
 
 Future<void> initServices() async {

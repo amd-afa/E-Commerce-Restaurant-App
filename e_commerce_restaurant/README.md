@@ -1,6 +1,6 @@
 # e_commerce_restaurant
 
-A new Flutter project for E-Commerce Restaurant App called FRESHII where the user can discover new food-boxes and add them to cart then submit them to order
+A Flutter project as a simple example for E-Commerce Restaurant App called FRESHII where the user can discover new food-boxes and add them to cart then submit them to order (used firbase as BackEnd)
 
 ## Screenshots
 
